@@ -25,21 +25,23 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYnNyaW5pdmFzYSIsImEiOiJjaXFuazk0ZHAwMWEzZnBubjgxY2FlbnU1In0.XqV5rLG4cToITHlk9Q3oSA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/bsrinivasa/ciqrx4gy70019bkncwbjvfe5m', //stylesheet location
+    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
     center: [76.9398,13.3118], // starting position
     zoom: 14, // starting zoom
     hash: true
 })
+
+var popup = new mapboxgl.Popup({closeOnClick: false})
+    .setLngLat([-96, 37.8])
+    .setHTML('<h1>Welcome to Gubbi!</h1><Close this message to continue.')
+    .addTo(map);
 
 map.addControl(new mapboxgl.Geocoder());
 map.addControl(new mapboxgl.Directions());
 map.addControl(new mapboxgl.Geolocate({ position: 'bottom-right'}));
 map.addControl(new mapboxgl.Navigation({ position: 'top-right' }));
 
-var popup = new mapboxgl.Popup({closeOnClick: false})
-    .setLngLat([-96, 37.8])
-    .setHTML('<h1>Welcome to Gubbi!</h1><Close this message to continue.')
-    .addTo(map);
+
 
 </script>
 
