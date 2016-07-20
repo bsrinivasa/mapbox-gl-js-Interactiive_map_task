@@ -32,8 +32,8 @@ var map = new mapboxgl.Map({
 })
 
 var popup = new mapboxgl.Popup({closeOnClick: false})
-    .setLngLat([76.9,13.3])
-    .setHTML('<h1>Welcome to Gubbi!</h1>')
+    .setLngLat([76.94,13.32])
+    .setHTML('<h1>Welcome to Gubbi!</h1><p>Close this message to continue.</p>')
     .addTo(map);
 
 map.addControl(new mapboxgl.Geocoder());
