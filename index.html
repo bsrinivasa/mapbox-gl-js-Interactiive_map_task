@@ -32,7 +32,7 @@ var map = new mapboxgl.Map({
 })
 
 var popup = new mapboxgl.Popup({closeOnClick: false})
-    .setLngLat([-96, 37.8])
+    .setLngLat([76.9398,13.3118])
     .setHTML('<h1>Welcome to Gubbi!</h1><Close this message to continue.')
     .addTo(map);
 
@@ -40,6 +40,7 @@ map.addControl(new mapboxgl.Geocoder());
 map.addControl(new mapboxgl.Directions());
 map.addControl(new mapboxgl.Geolocate({ position: 'bottom-right'}));
 map.addControl(new mapboxgl.Navigation({ position: 'top-right' }));
+map.setCenter([76.94, 13.4]);
 
 
 
